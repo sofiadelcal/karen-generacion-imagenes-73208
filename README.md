@@ -4,8 +4,8 @@ Actividad R2-A5-S14 Generación (Moodle 73208).
 
 ## Contenido publicado
 
-- [Karen_DCGAN_MNIST.ipynb: prueba de DCGAN en MNIST ejecutada en Colab.
-- [gan_core.py y experimento_digitos.py: GAN introductoria en NumPy.
+- Karen_DCGAN_MNIST.ipynb: prueba de DCGAN en MNIST ejecutada en Colab.
+- gan_core.py y experimento_digitos.py: GAN introductoria en NumPy.
 - Las métricas y figuras publicadas corresponden a la GAN introductoria de dígitos 8 × 8.
 
 ## Estado de ejecución
@@ -20,8 +20,6 @@ La práctica con LFW y el ajuste de Stable Diffusion con LoRA siguen pendientes 
 
 Con Python, NumPy, Matplotlib y scikit-learn instalados, ejecutar:
 
-```bash
 python experimento_digitos.py
-```
 
 El script usa las semillas 204–208 y regenera las métricas y figuras de la GAN introductoria. Revisar licencias de datos y modelos antes de distribuir imágenes o adaptadores.
