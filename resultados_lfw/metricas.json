@@ -1,0 +1,16 @@
+{
+  "dataset": "Labeled Faces in the Wild (LFW)",
+  "identidades_incluidas": 7,
+  "rostros_disponibles_filtrados": 1288,
+  "rostros_usados": 256,
+  "resolucion_modelo": "32x32 escala de grises",
+  "epocas": 1,
+  "lotes": 8,
+  "pasos_actualizacion": 8,
+  "semilla": 42,
+  "loss_d_final": 1.377591848373413,
+  "loss_g_final": 0.6052526235580444,
+  "duracion_segundos": 30.1,
+  "entorno": "Google Colab CPU",
+  "nota": "Prueba exploratoria corta; no equivale a entrenamiento convergido ni incluye evaluación FID."
+}
