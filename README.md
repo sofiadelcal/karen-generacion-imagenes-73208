@@ -1,24 +1,27 @@
-# Generación de imágenes con GAN y difusión latente
+# Generación de imágenes: GAN y difusión latente
 
 Actividad R2-A5-S14 Generación (Moodle 73208).
 
-Este repositorio contiene la implementación de una GAN introductoria y cuadernos de Colab para una DCGAN y un ajuste fino LoRA de Stable Diffusion. El informe principal se entrega como PDF en Moodle.
+## Contenido publicado
 
-## Archivos esperados
+- [Karen_DCGAN_MNIST.ipynb: prueba de DCGAN en MNIST ejecutada en Colab.
+- [gan_core.py y experimento_digitos.py: GAN introductoria en NumPy.
+- Las métricas y figuras publicadas corresponden a la GAN introductoria de dígitos 8 × 8.
 
-- `Karen_DCGAN_Rostros_LFW.ipynb`: arquitectura y entrenamiento de DCGAN con LFW.
-- `Karen_Diffusers_LoRA_Pokemon.ipynb`: ajuste exploratorio con Diffusers/LoRA.
-- `gan_core.py` y `experimento_digitos.py`: GAN en NumPy para imágenes de 8 × 8.
-- `resultados_gan_basico/`: métricas y figuras de cinco semillas.
+## Estado de ejecución
 
-## Estado de las pruebas
+La GAN introductoria se ejecutó con cinco semillas. El MMD² medio pasó de 0,4137 a 0,0265; la referencia real-real fue 0,0086. Esta métrica resume distancia entre distribuciones con el kernel del script y no demuestra por sí sola calidad visual ni diversidad.
 
-La GAN introductoria sobre dígitos se ejecutó en cinco semillas. Su MMD² medio bajó de 0,4137 antes del entrenamiento a 0,0265 al final; la comparación real-real fue 0,0086. Esa medida resume distancia entre distribuciones con el kernel usado en el código y no demuestra calidad o diversidad visual.
+La DCGAN de MNIST se ejecutó en CPU con 1.000 imágenes y dos épocas. Las pérdidas D/G fueron 1,3230/0,6983 y 1,1338/0,7804. Es una corrida breve de demostración, no un resultado facial; los mosaicos y el checkpoint generados en Colab aún no están publicados en este repositorio.
 
-Las prácticas de DCGAN y LoRA están preparadas, pero sus cuadernos todavía necesitan ejecutarse en Colab. Por tanto, no se atribuyen a esos modelos imágenes o métricas experimentales en el informe. Tras ejecutarlos, se deben añadir sus salidas y actualizar el análisis.
+La práctica con LFW y el ajuste de Stable Diffusion con LoRA siguen pendientes de ejecución. Los cuadernos preparados y el informe distinguen ese estado y no presentan resultados no medidos. LoRA requiere GPU y acceso autorizado al modelo. Nunca se debe guardar HF_TOKEN en el repositorio.
 
-## Ejecución local
+## Reproducción local
 
-Con Python, NumPy, Matplotlib y scikit-learn: `python experimento_digitos.py`. Las semillas 204–208 están fijadas en el script.
+Con Python, NumPy, Matplotlib y scikit-learn instalados, ejecutar:
 
-No se deben publicar tokens de Hugging Face ni pesos privados. Revisar las licencias del conjunto de datos y del modelo antes de redistribuir imágenes o adaptadores.
+```bash
+python experimento_digitos.py
+```
+
+El script usa las semillas 204–208 y regenera las métricas y figuras de la GAN introductoria. Revisar licencias de datos y modelos antes de distribuir imágenes o adaptadores.
